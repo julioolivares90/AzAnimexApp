@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/logo_de_la_app" />
+        android:contentDescription="@string/logo_de_la_app"
+        />
 
     <TextView
         android:id="@+id/textLogo"
@@ -29,6 +30,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         android:textSize="48sp"
+        android:fontFamily="@font/orbitron_bold"
         />
 
     <TextView
@@ -42,5 +44,6 @@
         app:layout_constraintVertical_bias="0.113"
         tools:layout_editor_absoluteX="0dp"
         android:textSize="20sp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:fontFamily="@font/orbitron_bold"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
