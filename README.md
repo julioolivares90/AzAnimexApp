@@ -2,4 +2,4 @@
 ## Aplicacion para AzAnimex
 
 
-![](https://github.com/julioolivares90/AzAnimexApp/blob/master/imagenes/img1.jpg)
+![](https://github.com/julioolivares90/AzAnimexApp/blob/master/app/src/main/images/img1.jpg)
