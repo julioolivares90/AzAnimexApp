@@ -7,8 +7,6 @@
     tools:context=".SplashScreen"
     android:background="@color/colorPrimaryDark"
     >
-
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
@@ -19,7 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/logo_de_la_app"
         />
-
     <TextView
         android:id="@+id/textLogo"
         android:layout_width="match_parent"
@@ -31,7 +28,6 @@
         android:textSize="48sp"
         android:fontFamily="@font/orbitron_bold"
         />
-
     <TextView
         android:id="@+id/textSlogan"
         android:layout_width="match_parent"
