@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+    android:id="@+id/navigation_inicio"
+    android:title="@string/inicio"
+    android:icon="@drawable/ic_home_black_24dp"
+    />
+    <item android:id="@+id/navigation_onas"
+        android:title="@string/onas"
+        android:icon="@drawable/ic_subscriptions_black_24dp"
+        />
+    <item android:title="@string/ovas"
+        android:id="@+id/navigation_ovas"
+        android:icon="@drawable/ic_slideshow_black_24dp"
+        />
+    <item android:icon="@drawable/ic_slideshow_black_24dp"
+        android:title="@string/especiales"
+        android:id="@+id/navigation_especiales"
+        />
+    <item android:id="@+id/navigation_pelicullas"
+        android:icon="@drawable/ic_slideshow_black_24dp"
+        android:title="@string/peliculas"
+        />
+</menu>

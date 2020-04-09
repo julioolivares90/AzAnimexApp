@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.darkwizard.azanimexapp.views.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/especialesFragment"
+        android:name="com.darkwizard.azanimexapp.views.EspecialesFragment"
+        android:label="fragment_especiales"
+        tools:layout="@layout/fragment_especiales" />
+    <fragment
+        android:id="@+id/onasFragment"
+        android:name="com.darkwizard.azanimexapp.views.OnasFragment"
+        android:label="fragment_onas"
+        tools:layout="@layout/fragment_onas" />
+    <fragment
+        android:id="@+id/ovasFragment"
+        android:name="com.darkwizard.azanimexapp.views.OvasFragment"
+        android:label="fragment_ovas"
+        tools:layout="@layout/fragment_ovas" />
+    <fragment
+        android:id="@+id/peliculasFragment"
+        android:name="com.darkwizard.azanimexapp.views.PeliculasFragment"
+        android:label="fragment_peliculas"
+        tools:layout="@layout/fragment_peliculas" />
+</navigation>

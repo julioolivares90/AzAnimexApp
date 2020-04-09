@@ -3,4 +3,12 @@
     <string name="az_animex">Az-Animex</string>
     <string name="nuestro_mundo_mas_ligero">Nuestro Mundo - Mas ligero</string>
     <string name="logo_de_la_app">logo de la app</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inicio">inicio</string>
+    <string name="peliculas">peliculas</string>
+    <string name="especiales">especiales</string>
+    <string name="ovas">ovas</string>
+    <string name="onas">onas</string>
 </resources>
