@@ -31,10 +31,17 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(InicioViewModel::class.java)
-
         viewModel.GetAnimeList().observe(viewLifecycleOwner, Observer {animes->
             adapter = InicioPostAdapter(animes)
             rv_inicioAnimes.adapter = adapter
         })
+        viewModel.IsLoading().observe(viewLifecycleOwner, Observer {
+           if (it){
+               mProgreesBar.visibility = View.VISIBLE
+           }else{
+               mProgreesBar.visibility = View.GONE
+           }
+        })
+
     }
 }

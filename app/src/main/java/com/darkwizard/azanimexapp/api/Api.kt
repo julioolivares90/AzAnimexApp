@@ -1,7 +1,6 @@
-package com.darkwizard.azanimexapp
+package com.darkwizard.azanimexapp.api
 
 import com.darkwizard.azanimexapp.models.InicioPost
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -15,7 +14,8 @@ interface Api {
     object retrofitInstance {
         val retrofit =
             Retrofit.Builder().baseUrl("https://az-animex-api.herokuapp.com/api/v1/")
-                .addConverterFactory(GsonConverterFactory.create()).build().create(Api::class.java)
+                .addConverterFactory(GsonConverterFactory.create()).build().create(
+                    Api::class.java)
 
     }
 }
