@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         android:id="@+id/rv_inicioAnimes"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
+        app:spanCount="2"
         tools:listitem="@layout/row_inicio_animes"
         />
 
