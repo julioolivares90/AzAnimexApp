@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.darkwizard.azanimexapp.models.InicioPost
 import com.darkwizard.azanimexapp.repository.AnimesRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.coroutines.coroutineContext
 
 class InicioViewModel : ViewModel() {
@@ -36,9 +38,14 @@ class InicioViewModel : ViewModel() {
     public fun GetAnimeList() : LiveData<MutableList<InicioPost>> = _animesList
 
     private fun SetAnimes() {
-        viewModelScope.launch {
+
+        viewModelScope.launch{
             SetLoading(true)
-            _animesList.value = animesRepository.GetAnimes()
+
+            val animes = withContext(Dispatchers.IO){
+                animesRepository.GetAnimes()
+            }
+            _animesList.value = animes
             SetLoading(false)
         }
     }

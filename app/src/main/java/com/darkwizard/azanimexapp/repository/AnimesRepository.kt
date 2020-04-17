@@ -6,7 +6,8 @@ import com.darkwizard.azanimexapp.models.InicioPost
 
 class AnimesRepository {
     suspend fun GetAnimes() : MutableList<InicioPost>{
-        val retrofitSingleton = RetrofitSingleton.createService()
-        return retrofitSingleton.getAllAnimes(1)
+        val retrofitSingleton =  RetrofitSingleton
+        val api = retrofitSingleton.buildService(Api::class.java)
+        return api.getAllAnimes(1)
     }
 }

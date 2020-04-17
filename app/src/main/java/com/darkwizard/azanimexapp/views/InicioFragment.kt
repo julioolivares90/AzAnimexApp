@@ -1,6 +1,7 @@
 package com.darkwizard.azanimexapp.views
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -31,7 +32,10 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(InicioViewModel::class.java)
+
         viewModel.GetAnimeList().observe(viewLifecycleOwner, Observer {animes->
+            Log.d("lista de animes",animes.toString())
+            print(animes.toString())
             adapter = InicioPostAdapter(animes)
             rv_inicioAnimes.adapter = adapter
         })
