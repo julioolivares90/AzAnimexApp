@@ -15,7 +15,7 @@ class InicioPostAdapter (val animes : MutableList<InicioPost>) : RecyclerView.Ad
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IncioPostHolder {
         
         val layoutInflater = LayoutInflater.from(parent.context).inflate(R.layout.row_inicio_animes,parent,false)
-        return InicioPostAdapter.IncioPostHolder(layoutInflater)
+        return IncioPostHolder(layoutInflater)
     }
 
     override fun getItemCount(): Int = animes.size

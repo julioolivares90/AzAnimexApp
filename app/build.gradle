@@ -20,6 +20,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -44,14 +47,16 @@ dependencies {
 
     //navigationUI
     // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'androidx.navigation:navigation-fragment:2.3.0-alpha05'
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0-alpha05"
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.0-alpha05"
 
     // Dynamic Feature Module Support
-    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.3.0-alpha05"
 
     // Testing Navigation
-    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+    androidTestImplementation "androidx.navigation:navigation-testing:2.3.0-alpha05"
 
     //viewmodels
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'

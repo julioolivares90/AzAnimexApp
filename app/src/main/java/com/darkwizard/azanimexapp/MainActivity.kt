@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,7 +25,10 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_onas,R.id.navigation_ovas,
             R.id.navigation_especiales
         ))
-        val navController = NavController(this)
+        val navController = findNavController(R.id.nav_host_fragment)
+
+        setupActionBarWithNavController(navController,appBarConfiguration)
+        nav_view.setupWithNavController(navController)
         setupBottonNavMenu(navController)
     }
 
