@@ -3,31 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/inicioFragment">
+    app:startDestination="@id/navigation_inicio">
 
     <fragment
-        android:id="@+id/inicioFragment"
+        android:id="@id/navigation_inicio"
         android:name="com.darkwizard.azanimexapp.views.InicioFragment"
-        android:label="fragment_inicio"
+        android:label="inicio"
         tools:layout="@layout/fragment_inicio" />
     <fragment
-        android:id="@+id/especialesFragment"
+        android:id="@id/navigation_especiales"
         android:name="com.darkwizard.azanimexapp.views.EspecialesFragment"
-        android:label="fragment_especiales"
+        android:label="especiales"
         tools:layout="@layout/fragment_especiales" />
     <fragment
-        android:id="@+id/onasFragment"
+        android:id="@id/navigation_onas"
         android:name="com.darkwizard.azanimexapp.views.OnasFragment"
-        android:label="fragment_onas"
+        android:label="onas"
         tools:layout="@layout/fragment_onas" />
     <fragment
-        android:id="@+id/ovasFragment"
+        android:id="@id/navigation_ovas"
         android:name="com.darkwizard.azanimexapp.views.OvasFragment"
-        android:label="fragment_ovas"
+        android:label="ovas"
         tools:layout="@layout/fragment_ovas" />
     <fragment
-        android:id="@+id/peliculasFragment"
+        android:id="@id/navigation_pelicullas"
         android:name="com.darkwizard.azanimexapp.views.PeliculasFragment"
-        android:label="fragment_peliculas"
+        android:label="peliculas"
         tools:layout="@layout/fragment_peliculas" />
 </navigation>
