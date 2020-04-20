@@ -12,6 +12,7 @@ import com.darkwizard.azanimexapp.viewmodels.InicioViewModel
 
 import com.darkwizard.azanimexapp.R
 import com.darkwizard.azanimexapp.adapters.InicioPostAdapter
+import com.darkwizard.azanimexapp.databinding.FragmentInicioBinding
 import kotlinx.android.synthetic.main.fragment_inicio.*
 
 /**
@@ -21,12 +22,16 @@ class InicioFragment : Fragment() {
 
     lateinit var viewModel: InicioViewModel
     lateinit var adapter: InicioPostAdapter
+
+    lateinit var binding : FragmentInicioBinding //el framework crea una clase especial para cada fragment
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false)
+      binding = FragmentInicioBinding.inflate(layoutInflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,13 +42,16 @@ class InicioFragment : Fragment() {
             Log.d("lista de animes",animes.toString())
             print(animes.toString())
             adapter = InicioPostAdapter(animes)
-            rv_inicioAnimes.adapter = adapter
+            binding.rvInicioAnimes.adapter = adapter
+            //rv_inicioAnimes.adapter = adapter
         })
         viewModel.IsLoading().observe(viewLifecycleOwner, Observer {
            if (it){
-               mProgreesBar.visibility = View.VISIBLE
+               binding.mProgreesBar.visibility = View.VISIBLE
+               //mProgreesBar.visibility = View.VISIBLE
            }else{
-               mProgreesBar.visibility = View.GONE
+               //mProgreesBar.visibility = View.GONE
+               binding.mProgreesBar.visibility = View.GONE
            }
         })
 
